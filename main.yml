@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Install a list of packages
+      when: ansible_os_family == "Debian"
+      ansible.builtin.apt:
+        pkg:
+          - curl
+          - git
+          - zsh
+
+    - name: Setup git configuration
+      when: ansible_os_family == "Debian"
+      ansible.builtin.git_config:
+        name: "{{ item.key }}"
+        scope: global
+        value: "{{ item.value }}"
+      loop:
+        - { key: "user.name", value: "Tiago" }
+        - { key: "user.email", value: "tiago.goes2009@gmail.com" }
