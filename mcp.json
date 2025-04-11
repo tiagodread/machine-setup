@@ -5,7 +5,7 @@
       "args": ["@playwright/mcp@latest", "--browser msedge"]
     },
     "github":{
-      "command": "bash /Users/tiago/github.sh"
+      "command": "bash ~/github.sh"
     }
   }
 }
