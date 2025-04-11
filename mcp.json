@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--browser msedge"]
+    },
+    "github":{
+      "command": "bash /Users/tiago/github.sh"
+    }
+  }
+}
